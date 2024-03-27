@@ -4,7 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
     actions: {
       getPersonajes: () => {
         method: "GET",
-          /* redirect: "follow" */
+          /* redirect: "follow" *///======>???
 
           fetch("https://www.swapi.tech/api/", getPersonajes)
             .then((response) => response.text())
