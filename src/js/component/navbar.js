@@ -24,7 +24,7 @@ export const Navbar = () => {
           className="btn btn-primary dropdown-toggle"
           data-bs-toggle="dropdown"
           aria-expanded="false"
-        > Favoutites
+        > Favoutites 0
         </button>
         <ul className="dropdown-menu">
           <li>
