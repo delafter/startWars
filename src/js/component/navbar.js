@@ -29,12 +29,12 @@ export const Navbar = () => {
         <ul className="dropdown-menu">
           <li>
             <a className="dropdown-item" href="#">
-              Dropdown link
+             tu favorito
             </a>
           </li>
           <li>
             <a className="dropdown-item" href="#">
-              Dropdown link
+              tu favorito
             </a>
           </li>
         </ul>

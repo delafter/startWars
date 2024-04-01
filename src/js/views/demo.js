@@ -1,36 +1,39 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-
+import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.css";
 
 export const Demo = () => {
+  const { id } = useParams();
   const { store, actions } = useContext(Context);
+  useEffect(() => {
+    actions.getCaracteristicas(id);
+  }, []);
 
+  console.log(store);
   return (
     <div className="container">
-      <h4 className="text-center mt-5">
-        pagina donde aparecen los personajes individialmente
-      </h4>
+      <h4 className="text-center mt-5">{store.personaje.name}</h4>
 
       <div className="card mb-3" style={{ maxwidth: "540px" }}>
         <div className="row g-0">
           <div className="col-md-4">
-            <img src="..." className="img-fluid rounded-start" alt="..." />
+            <img src="" className="img-fluid rounded-start" alt="mi padre..." />
           </div>
           <div className="col-md-8">
             <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+              <p>
+                <strong>Birthyear:</strong> {store.personaje.birth_year}{" "}
               </p>
-              <p className="card-text">
-                <small className="text-body-secondary">
-                  Last updated 3 mins ago
-                </small>
+              <p>
+                {" "}
+                <strong>Eye color:</strong> {store.personaje.eye_color}{" "}
+              </p>
+              <p>
+                {" "}
+                <strong>Hair color:</strong> {store.personaje.hair_color}{" "}
               </p>
             </div>
           </div>

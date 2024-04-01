@@ -1,29 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { FaRegHeart } from "react-icons/fa";
 
-export const Characters = () => {
+export const Characters = (props) => {
   return (
-    <div>
-      <h1>Characters</h1>
-      <div className="card" style={{ width: "18rem" }}>
-        <img src="" className="card-img-top" alt="personaje" />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <Link to="/demo" href="#" className="btn btn-primary" >
-            Learn more!
-          </Link>
-
-          <button className="btn btn-sm btn-outline-secondary" type="button">
-            like
-          </button>
-        </div>
+    <div className="card" style={{ width: "18rem" }}>
+      <img src={props.image} className="card-img-top" alt="personaje" />
+      <div className="card-body">
+        <h5 className="card-title">{props.title}</h5>
+        <br />
+        <Link to={`/single/${props.id}`} style={{marginRight:'100px'}}  href="#" className="btn btn-primary">
+          Learn more!
+        </Link>
+        <button
+          style={{ marginLeft: "10px" }}
+          className="btn btn-sm btn-outline-secondary"
+          type="button"
+        >
+          <FaRegHeart />
+        </button>
       </div>
     </div>
   );
+};
+
+Characters.propTypes = {
+  title: PropTypes.string,
+  image: PropTypes.string,
+  id: PropTypes.string,
 };
 
 export default Characters;

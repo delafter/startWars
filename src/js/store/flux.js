@@ -1,17 +1,61 @@
 const getState = ({ getStore, getActions, setStore }) => {
   return {
-    store: {},
-    actions: {
-      getPersonajes: () => {
-        method: "GET",
-          /* redirect: "follow" *///======>???
-
-          fetch("https://www.swapi.tech/api/", getPersonajes)
-            .then((response) => response.text())
-            .then((result) => console.log(result))
-            .catch((error) => console.error(error));
-      },
+    store: {
+      //las variables van en store
+      personaje: {},
+      personajes: [],
+      planetas: [],
     },
+    actions: {
+      //las fuciones van en acctions
+      getPersonajes: () => {
+        const requestCharacters = {
+          //que nombre deberia tener esta variable?
+          method: "GET",
+          redirect: "follow",
+        };
+
+        fetch("https://www.swapi.tech/api/people/", requestCharacters)
+          .then((response) => response.json())
+          .then((data) => setStore({ personajes: data.results }))
+          .catch((error) => console.log("error", error));
+      },
+
+      getPlanetas: () => {
+        const requestPlanetas = {
+          method: "GET",
+          redirect: "follow",
+        };
+
+        fetch("https://www.swapi.tech/api/planets/", requestPlanetas)
+          .then((response) => response.json())
+          .then((data) => setStore({ planetas: data.results }))
+          .catch((error) => console.log("error", error));
+      },
+
+      getCaracteristicas: (uid) => {
+        const requestCaracteristicas = {
+          method: "GET",
+          redirect: "follow",
+        };
+
+        fetch(
+          `https://www.swapi.tech/api/people/${uid}`,
+          requestCaracteristicas
+        )
+          .then((response) => response.json())
+          .then((data) => setStore({ personaje: data.result.properties }))
+          .catch((error) => console.log("error", error));
+      },
+
+         addFavorite: (name) => { 
+           
+            
+            };
+           
+    },
+
+
   };
 };
 
