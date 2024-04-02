@@ -9,7 +9,7 @@ export const Single = props => {
 	return (
 		<div className="container">
 		<h4 className="text-center mt-5">
-		  pagina donde aparecen los personajes individialmente
+		  pagina donde aparecen los personajes individialmentesss
 		</h4>
   
 		<div className="card mb-3" style={{ maxwidth: "540px" }}>

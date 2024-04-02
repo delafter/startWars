@@ -4,3 +4,31 @@
    
    
 }
+
+h1{
+    font-family: 'star jedi', arial;
+}
+h5, span, button {
+    font-family: 'star jedi',Arial, sans-serif;
+}
+
+body{
+    background-image: url('https://e0.pxfuel.com/wallpapers/905/365/desktop-wallpaper-star-wars-space-star-wars-galaxy.jpg');
+   /*  background-size: cover; */
+}
+
+.buton {
+    font-size: 16px;
+    padding: 5px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    
+}
+
+.buton:hover {
+    transform: scale(1.1);
+}

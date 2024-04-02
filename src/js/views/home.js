@@ -12,11 +12,12 @@ export const Home = () => {
   useEffect(() => {
     actions.getPersonajes();
     actions.getPlanetas();
+    
   }, []);
 
   return (
     <div>
-      <h1 style={{ display: "flex", justifyContent: "center" }}>Characters</h1>
+      <h1 style={{ display: "flex", justifyContent: "center", color: 'yellow' }}>Characters</h1>
       <br />
       <div className="container">
         <div className="row">
@@ -34,19 +35,19 @@ export const Home = () => {
             </div>
           ))}
         </div>
-        <h1 style={{ display: "flex", justifyContent: "center" }}>Planets</h1>
+        <h1 style={{ display: "flex", justifyContent: "center", color: 'yellow' }}>Planets</h1>
         <br />
         <div className="row">
-          {store.planetas.map((item, index) => (
+          {store.planetas.map((planet, index) => (
             <div
               key={index}
               className="col-md-4"
               style={{ marginBottom: "20px" }}
             >
               <Planets
-                title={item.name}
+                title={planet.name}
                 image={imagenesPlanets[index % imagenesPlanets.length]}
-                id={item.uid}
+                id={planet.uid}
               />
             </div>
           ))}

@@ -5,9 +5,11 @@ const getState = ({ getStore, getActions, setStore }) => {
       personaje: {},
       personajes: [],
       planetas: [],
+      planetasId: {},
+      favorites: [],
     },
     actions: {
-      //las fuciones van en acctions
+      //las funciones van en actions
       getPersonajes: () => {
         const requestCharacters = {
           //que nombre deberia tener esta variable?
@@ -46,16 +48,35 @@ const getState = ({ getStore, getActions, setStore }) => {
           .then((response) => response.json())
           .then((data) => setStore({ personaje: data.result.properties }))
           .catch((error) => console.log("error", error));
+
+
       },
 
-         addFavorite: (name) => { 
-           
-            
-            };
-           
-    },
+      getCaracteristicasPlanetas: (uid) => {
+        const requestCaracteristicas = {
+          method: "GET",
+          redirect: "follow",
+        };
 
-
+        fetch(
+          `https://www.swapi.tech/api/planets/${uid}`,
+          requestCaracteristicas
+        )
+          .then((response) => response.json())
+          .then((data) => setStore({ planetasId: data.result.properties }))
+          .catch((error) => console.log("error", error));
+      },
+     /* 
+      createFavorite: (name, uid) => {
+        const store = getStore();
+        const newFavorite = {
+          name: name,
+          id: uid, 
+        };
+        setStore({ favorites: [...store.favorites, newFavorite] });
+      }, */
+    
+    } 
   };
 };
 
