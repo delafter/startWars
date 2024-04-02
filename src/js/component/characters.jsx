@@ -20,9 +20,9 @@ export const Characters = (props) => {
           <div className="row">
             <Link
               to={`/single/${props.id}`}
-              style={{ marginRight: "0px", width: "70%" }}
+              style={{ marginRight: "0px", width: "70%", textDecoration: "none" }}
               href="#"
-              className="btn btn-primary"
+              className="buton"
             >
               <span>Learn more!</span>
             </Link>
