@@ -2,9 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { FaRegHeart } from "react-icons/fa";
+import { useState, useContext, useEffect } from "react";
+import { Context } from "../store/appContext";
+
 
 export const Characters = (props) => {
-  console.log(props);
+  /* const { store, actions } = useContext(Context); */
+
+
+ 
   return (
     <div className="card" style={{ width: "18rem" }}>
       <img src={props.image} className="card-img-top" alt="personaje" />
@@ -30,7 +36,8 @@ export const Characters = (props) => {
               className="col"
               style={{ display: "flex", justifyContent: "center" }}
             >
-              <button
+              <button 
+               /*  onClick={actions.createFavorite(props.title)} */
                 style={{ marginLeft: "10px", width: "200%" }}
                 className="btn btn-sm btn-outline-secondary"
                 type="button"

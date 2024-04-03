@@ -10,6 +10,8 @@ export const Navbar = () => {
     setFavorites(favorites);
   }, [favorites]);
 
+    
+
 
   return (
     <nav className="navbar">
@@ -20,7 +22,7 @@ export const Navbar = () => {
           style={{ marginLeft: "40px", width: "150px"}}
         />
       </Link>
-      <button className="buton">pulsar</button>
+     
 
       <div className="btn-group" role="group">
         <button

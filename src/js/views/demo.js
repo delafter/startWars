@@ -16,12 +16,12 @@ export const Demo = () => {
 
   return (
     <div className="container">
-      <h4 className="text-center mt-5">{store.personaje.name}</h4>
+      <h4 className="text-center mt-5" style={{color:'yellow'}}>{store.personaje.name}</h4>
 
       <div className="card mb-3" style={{ maxwidth: "540px" }}>
         <div className="row ">
           <div className="col-md-4">
-            <img src="" className="img-fluid rounded-start" alt="mi padre..." />
+            <img src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`} className="img-fluid rounded-start" alt="mi padre..." />
           </div>
           <div className="col">
             <div className="card-body">

@@ -66,15 +66,16 @@ const getState = ({ getStore, getActions, setStore }) => {
           .then((data) => setStore({ planetasId: data.result.properties }))
           .catch((error) => console.log("error", error));
       },
-     /* 
-      createFavorite: (name, uid) => {
-        const store = getStore();
+     
+      createFavorite: (name) => {
+        console.log(name);
+        /* const store = getStore();
         const newFavorite = {
           name: name,
-          id: uid, 
+           
         };
-        setStore({ favorites: [...store.favorites, newFavorite] });
-      }, */
+        setStore({ favorites: [...store.favorites, newFavorite] }); */
+      },
     
     } 
   };

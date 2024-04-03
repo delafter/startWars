@@ -5,6 +5,7 @@ import Planets from "../component/planets.jsx";
 import { Context } from "../store/appContext";
 import imagenes from "../component/imagenpersonajes.jsx";
 import imagenesPlanets from "../component/imagenplanetas.jsx";
+ 
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
@@ -20,6 +21,7 @@ export const Home = () => {
       <h1 style={{ display: "flex", justifyContent: "center", color: 'yellow' }}>Characters</h1>
       <br />
       <div className="container">
+        
         <div className="row">
           {store.personajes.map((item, index) => (
             <div
@@ -31,6 +33,7 @@ export const Home = () => {
                 title={item.name}
                 image={imagenes[index % imagenes.length]} // el % es para que no se pase del tamaño del array
                 id={item.uid}
+                
               />
             </div>
           ))}
