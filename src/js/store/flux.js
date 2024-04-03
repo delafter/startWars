@@ -48,8 +48,6 @@ const getState = ({ getStore, getActions, setStore }) => {
           .then((response) => response.json())
           .then((data) => setStore({ personaje: data.result.properties }))
           .catch((error) => console.log("error", error));
-
-
       },
 
       getCaracteristicasPlanetas: (uid) => {
@@ -66,19 +64,18 @@ const getState = ({ getStore, getActions, setStore }) => {
           .then((data) => setStore({ planetasId: data.result.properties }))
           .catch((error) => console.log("error", error));
       },
-     
+
       createFavorite: (name) => {
-       
         const store = getStore();
-       
-           
-        
+
         setStore({ favorites: [...store.favorites, name] });
-        console.log(getStore().favorites)
-          
       },
-    
-    } 
+      deleteFavorite: (name) => {
+        const store = getStore();
+        const newFavorites = store.favorites.filter((item) => item !== name);
+        setStore({ favorites: newFavorites });
+      },
+    },
   };
 };
 

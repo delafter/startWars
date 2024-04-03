@@ -10,9 +10,11 @@ export const Characters = (props) => {
   const { store, actions } = useContext(Context);
 
 
- console.log(store.favorites)
+ 
   return (
+    
     <div className="container"> 
+    
     <div className="card" style={{ width: "18rem" }}>
      
       <img src={props.image} className="card-img-top" alt="personaje" />
@@ -47,7 +49,11 @@ export const Characters = (props) => {
               >
                 <FaRegHeart />
               </button>
+           {/*    <button onClick={()=>actions.deleteFavorite(props.title)} className="btn btn-sm btn-outline-secondary" type="button"
+            >
+              </button> */}
             </div>
+           
           </div>
         </div>
       </div>
