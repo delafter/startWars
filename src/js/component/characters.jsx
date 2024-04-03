@@ -49,9 +49,7 @@ export const Characters = (props) => {
               >
                 <FaRegHeart />
               </button>
-           {/*    <button onClick={()=>actions.deleteFavorite(props.title)} className="btn btn-sm btn-outline-secondary" type="button"
-            >
-              </button> */}
+       
             </div>
            
           </div>

@@ -30,7 +30,7 @@ export const Navbar = () => {
         </button>
         <ul className="dropdown-menu">
           {store.favorites.length > 0 ? (
-            store.favorites.map((item, index) => (
+            store.favorites.map((item, index) => (    //necesitaba ser un parentesis y no un corchete para que no me diera error
               <li key={index}>
                 <div style={{ display: "flex" }}>
                   <span className="favorites" style={{ width: "90px" }}>

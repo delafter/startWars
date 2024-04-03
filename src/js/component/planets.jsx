@@ -2,10 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { FaRegHeart } from "react-icons/fa";
+import { useState, useContext, useEffect } from "react";
+import { Context } from "../store/appContext";
 
 
 export const Planets = (props) => {
-  
+  const { store, actions } = useContext(Context);
+
   
   return (
     
@@ -29,6 +32,7 @@ export const Planets = (props) => {
                 style={{ display: "flex", justifyContent: "center"}}
               >
               <button 
+                onClick={()=>actions.createFavorite(props.title)}
                 style={{ marginLeft: "10px", width: "200%" }}
                 className="btn btn-sm btn-outline-secondary"
                 type="button"
