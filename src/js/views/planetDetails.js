@@ -12,7 +12,7 @@ export const PlanetDetails = () => {
     actions.getCaracteristicasPlanetas(id);
   }, []);
 
-  console.log(store.planetasId);
+
 
   return (
     <div className="container">

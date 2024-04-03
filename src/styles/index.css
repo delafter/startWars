@@ -32,3 +32,9 @@ body{
 .buton:hover {
     transform: scale(1.1);
 }
+
+.carrusel {
+    overflow-x: scroll;
+    display: flex;
+    
+}

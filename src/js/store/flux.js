@@ -68,13 +68,14 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
      
       createFavorite: (name) => {
-        console.log(name);
-        /* const store = getStore();
-        const newFavorite = {
-          name: name,
+       
+        const store = getStore();
+       
            
-        };
-        setStore({ favorites: [...store.favorites, newFavorite] }); */
+        
+        setStore({ favorites: [...store.favorites, name] });
+        console.log(getStore().favorites)
+          
       },
     
     } 

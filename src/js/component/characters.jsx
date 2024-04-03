@@ -7,12 +7,14 @@ import { Context } from "../store/appContext";
 
 
 export const Characters = (props) => {
-  /* const { store, actions } = useContext(Context); */
+  const { store, actions } = useContext(Context);
 
 
- 
+ console.log(store.favorites)
   return (
+    <div className="container"> 
     <div className="card" style={{ width: "18rem" }}>
+     
       <img src={props.image} className="card-img-top" alt="personaje" />
       <div className="card-body">
         <h5
@@ -22,7 +24,8 @@ export const Characters = (props) => {
           {props.title}
         </h5>
         <br />
-        <div className="container">
+        <div className="container"> 
+          
           <div className="row">
             <Link
               to={`/single/${props.id}`}
@@ -37,7 +40,7 @@ export const Characters = (props) => {
               style={{ display: "flex", justifyContent: "center" }}
             >
               <button 
-               /*  onClick={actions.createFavorite(props.title)} */
+                onClick={()=>actions.createFavorite(props.title)}
                 style={{ marginLeft: "10px", width: "200%" }}
                 className="btn btn-sm btn-outline-secondary"
                 type="button"
@@ -48,6 +51,7 @@ export const Characters = (props) => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
