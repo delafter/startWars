@@ -25,7 +25,7 @@ export const Home = (props) => {
 
       <br />
       <div className="container">
-        <div className="row">
+        <div className="row flex-row flex-nowrap overflow-auto">
           {store.personajes.map((item, index) => (
             <div
               key={index}
@@ -40,13 +40,16 @@ export const Home = (props) => {
             </div>
           ))}
         </div>
+        
+
+
         <h1
           style={{ display: "flex", justifyContent: "center", color: "yellow" }}
         >
           Planets
         </h1>
         <br />
-        <div className="row">
+        <div className="row flex-row flex-nowrap overflow-auto">
           {store.planetas.map((planet, index) => (
             <div
               key={index}

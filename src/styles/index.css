@@ -33,11 +33,7 @@ body{
     transform: scale(1.1);
 }
 
-.carrusel {
-    overflow-x: scroll;
-    display: flex;
-    
-}
+
 
 .favorites, li {
     font-family: 'arial';
@@ -49,3 +45,25 @@ body{
     padding: 1px;
     
 }
+
+/* Estilos para la barra de desplazamiento */
+div.overflow-auto::-webkit-scrollbar {
+  width: 10px; /* Ancho de la barra */
+}
+
+/* Estilo del riel de la barra de desplazamiento */
+div.overflow-auto::-webkit-scrollbar-track {
+    background-image: url('https://e0.pxfuel.com/wallpapers/905/365/desktop-wallpaper-star-wars-space-star-wars-galaxy.jpg');
+}
+
+/* Estilo del pulgar (scrollbar handle) */
+div.overflow-auto::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color del pulgar */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo del pulgar al pasar el mouse */
+div.overflow-auto::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Cambio de color al pasar el mouse */
+}
+

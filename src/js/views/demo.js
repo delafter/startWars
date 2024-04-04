@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
+
 import "../../styles/demo.css";
 
 export const Demo = () => {
@@ -17,6 +18,7 @@ export const Demo = () => {
   return (
     <div className="container">
       <h4 className="text-center mt-5" style={{color:'yellow'}}>{store.personaje.name}</h4>
+      
 
       <div className="card mb-3" style={{ maxwidth: "540px" }}>
         <div className="row ">
@@ -36,6 +38,8 @@ export const Demo = () => {
                 {" "}
                 <strong>Hair color:</strong> {store.personaje.hair_color}{" "}
               </p>
+              <p><strong>Skin color: </strong> {store.personaje.skin_color}</p>
+              <p><strong>Gender: </strong> {store.personaje.gender}</p>
             </div>
           </div>
           <div
