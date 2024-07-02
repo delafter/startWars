@@ -7,7 +7,7 @@ import { Context } from "../store/appContext";
 
 
 export const Characters = (props) => {
-  const { store, actions } = useContext(Context);
+  const { store, actions } = useContext(Context); 
 
 
  
